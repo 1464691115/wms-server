@@ -1,5 +1,5 @@
 server:
-  port: 9102
+  port: 6002
 
 spring:
   jackson:
@@ -7,9 +7,9 @@ spring:
     time-zone: GMT+8
   datasource:
     name: lansea
-    url: jdbc:mysql://116.62.4.75:3306/lansea_wms?useUnicode=true&characterEncoding=utf-8
-    username: lansea
-    password: 123456
+    url: jdbc:mysql://82.156.13.216:3306/lansea_wms?useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: sa123
     type: com.alibaba.druid.pool.DruidDataSource
     driver-class-name: com.mysql.jdbc.Driver
     filters: stat

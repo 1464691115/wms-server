@@ -30,6 +30,11 @@ public class TokenInterceptor implements HandlerInterceptor {
                 throw new Exception("Token 为空");
             }
             User user = Token.createToken(auth).findUser();
+            System.out.print("user");
+            System.out.print(user);
+            System.out.print(Token.createToken(auth));
+            
+
             if (user == null) {
                 throw new Exception("Token 用户不存在");
             }
@@ -52,12 +57,14 @@ public class TokenInterceptor implements HandlerInterceptor {
     }
 
     @Override
-    public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler, ModelAndView modelAndView) throws Exception {
+    public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler,
+            ModelAndView modelAndView) throws Exception {
 
     }
 
     @Override
-    public void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex) throws Exception {
+    public void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex)
+            throws Exception {
 
     }
 }

@@ -48,7 +48,7 @@ public class LogRegController {
         }
         loginRecordService.addLogin(user);
         userService.refreshUserToken(user);
-        System.out.println(user);
+        System.out.print(user);
         return Result.success(user);
     }
 
