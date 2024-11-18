@@ -1,11 +1,13 @@
 import MenuUtil from "@/util/MenuUtil";
 import aside_menu from "@/router/aside_menu";
 
+
 export default {
+    mode: 'history',
     routes: [
         {
             path: '/',
-            redirect: '/Login'
+            redirect: '/Back'
         },
         {
             // 首页登录页面

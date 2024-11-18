@@ -9,13 +9,14 @@ const webpack = require('webpack');
 module.exports = {
   devServer: {
     port: 20003,
-    // proxy: {
-    //   '/basic-api': {
-    //     // target: 'http://82.156.13.216:6002',
-    //     target: 'http://localhost:6002/',
-    //     changeOrigin: true,
-    //   },
-    // },
+    proxy: {
+      '/basic-api': {
+        target: 'http://82.156.13.216:6002',
+        // target: 'http://localhost:6002',
+        changeOrigin: true,
+        pathRewrite: { '^/basic-api': '' },
+      },
+    },
   },
   productionSourceMap: false,
   outputDir: resolve('dist'),
